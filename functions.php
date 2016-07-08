@@ -153,7 +153,7 @@ switch ($action) {
       exit();
     }
     $date = date('Y-m-d');
-    $result = $mysqli->query("UPDATE carriages_owners SET date_to = '$date' WHERE carriage_id = '$number' AND owner_id = '$oldOwner' AND date_to = NULL ");
+    $result = $mysqli->query("UPDATE carriages_owners SET date_to = '$date' WHERE carriage_id = '$number' AND owner_id = '$oldOwner' AND date_to IS NULL ");
     if (!$result) {
       $response = array(
         "status" => "0",
